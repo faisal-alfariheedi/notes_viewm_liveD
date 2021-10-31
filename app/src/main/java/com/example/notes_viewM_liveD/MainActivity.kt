@@ -24,11 +24,7 @@ class MainActivity : AppCompatActivity() {
         init()
         add.setOnClickListener{
             if(edn.text.isNotEmpty()){
-
-//                db.addeditNote(Note(0, edn.text.toString()))
                 mvm.addedit(Note(0, edn.text.toString()))
-//                 setuprvdata()
-
                 edn.text.clear()
             }
         }
