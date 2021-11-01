@@ -9,7 +9,27 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import notes_viewM_liveD.R
+/*
 
+i made this big note to tell any who check the code if you want to use the local db go to Vm and change
+repo call to repo(application,0) by default the app is using firebase
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ */
 class MainActivity : AppCompatActivity() {
     lateinit var edn: EditText
     lateinit var add: Button
