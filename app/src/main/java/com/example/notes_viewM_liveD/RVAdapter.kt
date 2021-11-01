@@ -9,11 +9,14 @@ import android.widget.ImageButton
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import androidx.cardview.widget.CardView
+import androidx.fragment.app.Fragment
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import notes_viewM_liveD.R
+import notes_viewM_liveD.main
 
-class RVAdapter( val cont: Context): RecyclerView.Adapter<RVAdapter.ItemViewHolder>()  {
-    private lateinit var rv: List<Note>
+class RVAdapter( val cont: Fragment): RecyclerView.Adapter<RVAdapter.ItemViewHolder>()  {
+    private var rv: List<Note> = listOf()
     class ItemViewHolder(itemView: View): RecyclerView.ViewHolder(itemView)
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
         return ItemViewHolder(
@@ -32,9 +35,13 @@ class RVAdapter( val cont: Context): RecyclerView.Adapter<RVAdapter.ItemViewHold
             ed.setOnClickListener{
                 alert(rv[position])
             }
+            rvlisting.setOnClickListener{
+                Navigation.findNavController(it).navigate(R.id.action_main_to_view)
+                Vm.pocket=rv[position]
+            }
             del.setOnClickListener{
 
-                if(cont is MainActivity)
+                if(cont is main)
                    cont.del(rv[position])
             }
 
@@ -50,13 +57,13 @@ class RVAdapter( val cont: Context): RecyclerView.Adapter<RVAdapter.ItemViewHold
 
     fun alert(note: Note) {
         var n=note
-        var d= AlertDialog.Builder(cont)
+        var d= AlertDialog.Builder(cont.requireContext())
         d.setTitle("Edit note")
         d.setCancelable(false)
-        var Ed= EditText(cont)
+        var Ed= EditText(cont.requireContext())
         d.setPositiveButton("Change") { _, _ ->
             n.note = Ed.text.toString()
-            if (cont is MainActivity) cont.addedi(note)
+            if (cont is main) cont.addedi(note)
         }
             .setNegativeButton("Cancel") { d, _ -> d.cancel() }
         d.setView(Ed)

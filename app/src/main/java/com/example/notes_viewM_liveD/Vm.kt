@@ -20,5 +20,8 @@ class Vm(application: Application) : AndroidViewModel(application) {
     fun getAll():LiveData<List<Note>>{
         return list
     }
+    companion object{
+        var pocket: Note? =null
+    }
 
 }

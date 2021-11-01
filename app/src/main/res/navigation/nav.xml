@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/main">
+    <fragment
+        android:id="@+id/view"
+        android:name="notes_viewM_liveD.view"
+        android:label="fragment_view"
+        tools:layout="@layout/fragment_view" >
+        <action
+            android:id="@+id/action_view_to_main"
+            app:destination="@id/main" />
+    </fragment>
+    <fragment
+        android:id="@+id/main"
+        android:name="notes_viewM_liveD.main"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main">
+        <action
+            android:id="@+id/action_main_to_view"
+            app:destination="@id/view" />
+    </fragment>
+</navigation>

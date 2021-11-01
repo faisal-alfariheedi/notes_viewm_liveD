@@ -4,7 +4,11 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Faisal/AndroidStudioProjects/notes_viewm/app/src/main/res/drawable/ic_baseline_delete_forever_24.xml" value="0.19583333333333333" />
+        <entry key="..\:/Users/Faisal/AndroidStudioProjects/notes_viewm/app/src/main/res/layout/activity_main.xml" value="0.328125" />
+        <entry key="..\:/Users/Faisal/AndroidStudioProjects/notes_viewm/app/src/main/res/layout/fragment_main.xml" value="0.328125" />
+        <entry key="..\:/Users/Faisal/AndroidStudioProjects/notes_viewm/app/src/main/res/layout/fragment_view.xml" value="0.328125" />
         <entry key="..\:/Users/Faisal/AndroidStudioProjects/notes_viewm/app/src/main/res/layout/rvlist.xml" value="0.328125" />
+        <entry key="..\:/Users/Faisal/AndroidStudioProjects/notes_viewm/app/src/main/res/xml/root_preferences.xml" value="0.328125" />
       </map>
     </option>
   </component>
