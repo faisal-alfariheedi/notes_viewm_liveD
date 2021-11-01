@@ -56,7 +56,7 @@ class RVAdapter( val cont: Context): RecyclerView.Adapter<RVAdapter.ItemViewHold
         var Ed= EditText(cont)
         d.setPositiveButton("Change") { _, _ ->
             n.note = Ed.text.toString()
-            if (cont is MainActivity) cont.addedi(n)
+            if (cont is MainActivity) cont.addedi(note)
         }
             .setNegativeButton("Cancel") { d, _ -> d.cancel() }
         d.setView(Ed)

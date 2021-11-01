@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
         init()
         add.setOnClickListener{
             if(edn.text.isNotEmpty()){
-                mvm.addedit(Note(0, edn.text.toString()))
+               addedi(edn.text.toString())
                 edn.text.clear()
             }
         }
@@ -41,6 +41,9 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this,"updated",Toast.LENGTH_SHORT).show()
         })
 
+    }
+    fun addedi(note:String){
+        mvm.addedit(note)
     }
     fun addedi(note:Note){
         mvm.addedit(note)
